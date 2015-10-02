@@ -1,3 +1,4 @@
+
 /**********************************************************************************
 **Authors: Emily Falkner, Tim Manicki
 **Class: CSE 430: Operating Systems
@@ -11,7 +12,23 @@
 
 using namespace std;
 
-int main()
+int main() 
+{
+	
+	
+	return 0;	
+}
+
+int NewItem ()
+{
+	
+	
+	
+}
+
+InitQueue ()
 {
 	
 }
+
+
