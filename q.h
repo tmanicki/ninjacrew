@@ -20,9 +20,9 @@ typedef struct q-ele //Create a struct of type q-ele
 };
 
 //FUNCTION DECLARATIONS
-NewItem(); //returns a pointer to a new q-element
-InitQueue(&head);//creates an empty queue, pointed to by the variable head
-AddQueue(&head, item);//adds a queue item, pointed to by "item", to the queue pointed to by head
-DelQueue(&head); //deletes an item from head and returns a pointer to the deleted item
-RotateQ(&head);//moves the head pointer to the next element in the queue
-FreeItem(item);//frees an item from memory
+q-ele *NewItem(); //returns a pointer to a new q-element
+void InitQueue(q-ele *head);//creates an empty queue, pointed to by the variable head
+void AddQueue(q-ele *head, q-ele *item);//adds a queue item, pointed to by "item", to the queue pointed to by head
+q-ele *DelQueue(q-ele *head); //deletes an item from head and returns a pointer to the deleted item
+void RotateQ(q-ele *head);//moves the head pointer to the next element in the queue
+//void FreeItem(q-ele *item);//frees an item from memory
