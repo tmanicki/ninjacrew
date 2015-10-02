@@ -17,7 +17,7 @@ typedef struct q-ele //Create a struct of type q-ele
 	int payload;
 	q-ele *prev;
 	q-ele *next;
-}
+};
 
 //FUNCTION DECLARATIONS
 NewItem(); //returns a pointer to a new q-element
