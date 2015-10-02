@@ -8,4 +8,10 @@
 
 #include "q.h"
 
-// i don't care
+
+using namespace std;
+
+int main()
+{
+	
+}
