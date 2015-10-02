@@ -7,3 +7,26 @@
 ***********************************************************************************/
 //HEADER FILES
 #include "q.h"
+
+
+using namespace std;
+
+int main() 
+{
+	
+	
+	return 0;	
+}
+
+q-ele *NewItem ()
+{
+	
+	
+}
+
+InitQueue ()
+{
+	
+}
+
+

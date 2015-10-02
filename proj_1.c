@@ -19,9 +19,8 @@ int main()
 	return 0;	
 }
 
-int NewItem ()
+q-ele *NewItem ()
 {
-	
 	
 	
 }
@@ -30,5 +29,7 @@ InitQueue ()
 {
 	
 }
+
+
 
 
