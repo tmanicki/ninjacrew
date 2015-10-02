@@ -1,3 +1,4 @@
+
 /**********************************************************************************
 **Authors: Emily Falkner, Tim Manicki
 **Class: CSE 430: Operating Systems
@@ -8,4 +9,26 @@
 
 #include "q.h"
 
-// i don't care
+
+using namespace std;
+
+int main() 
+{
+	
+	
+	return 0;	
+}
+
+int NewItem ()
+{
+	
+	
+	
+}
+
+InitQueue ()
+{
+	
+}
+
+
