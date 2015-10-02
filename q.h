@@ -5,6 +5,10 @@
 **Assignment: Project 1
 **File Name: q.h
 ******************************************************************************************************/
+//HEADER FILES
+#inlcude <iostream>
 
-#inlcude <stdio.h>
-#include <stdlib.h>
+//CREATE STRUCTS
+
+
+//FUNCTION DECLARATIONS
