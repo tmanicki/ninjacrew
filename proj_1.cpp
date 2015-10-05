@@ -7,26 +7,56 @@
 ***********************************************************************************/
 //HEADER FILES
 #include "q.h"
-
+qele *head= null;
+qele *current = head;
 
 using namespace std;
 
 int main() 
-{
-	
+
 	
 	return 0;	
 }
 
-q-ele *NewItem ()
+NewItem ()
 {
 	
+//	return current->next;
 	
 }
 
-InitQueue ()
+InitQueue (&head)
 {
 	
 }
 
+AddQueue(&head, item) 
+{
+	qele *temp;
+	temp = (qele*) malloc (sizeof (qele));
+	
+	
+	
+	else { return current-> next; }
+}
 
+DelQueue(&head)
+{
+	
+}
+
+// Deletes header
+RotateQ (&head)
+{
+	qele *temp;
+	temp = (qele*) malloc (sizeof (qele));
+	temp = header;
+	header = temp->next;
+	header->prev = NULL;
+	FreeItem (temp);
+}
+
+FreeItem (item)
+{
+	free item;
+}
