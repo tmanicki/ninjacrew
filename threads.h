@@ -5,6 +5,12 @@
 **Assignment: Project 2
 **File Name: threads.h
 ******************************************************************************************************/
+#ifndef THREADS_H
+#define THREADS_H
+
+//include files
+#include "q.h"
+
 #define TheSizeOfTheStack 8192; 
 
 void start_thread(void (*function)(void))
@@ -21,3 +27,20 @@ void start_thread(void (*function)(void))
 	AddQueue(&RunQ,tcb);
 	
 }
+
+void run()
+{
+	ucontext_t parent;
+	getcontext(&parent);
+	swapcontext(&parent, &(RunQ->context));	
+}
+
+void yeild()
+{
+	ucontext_t parent;
+	getcontext(&parent);
+	RunQ->context = parent;
+	RotateQ(&RunQ); //rotates Q
+	swapcontext(&parent, &()RunQ->context)):
+}
+#endif
