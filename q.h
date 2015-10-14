@@ -83,12 +83,12 @@ void AddQueue(struct TCB_t *head, struct TCB_t *item) //adds to queue
 		
 		else // multiple queus in list
 		{
-			printf("fuckthis1");
+			//printf("fuckthis1");
 			item->prev = first->prev; 
 			item->next = first; 
 			first->prev->next = item; 
 			first->prev = item;
-			printf("fuckthis2");
+			//printf("fuckthis2");
 		}
 	}
 	
