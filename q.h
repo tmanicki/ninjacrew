@@ -6,9 +6,9 @@
 **File Name: q.h
 ******************************************************************************************************/
 //HEADER FILES
-#include<iostream>
-#include<cstdio>
-#include<cstdlib>
+#include <stdlib.h>
+#include <stdio.h>
+
 
 //START HEADER GUARD
 #ifndef Q_H
