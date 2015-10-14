@@ -8,7 +8,7 @@
 //HEADER FILES
 #include <stdlib.h>
 #include <stdio.h>
-#include "tcb.h""
+#include "tcb.h"
 
 //START HEADER GUARD
 #ifndef Q_H
@@ -17,8 +17,8 @@
 //DATA STRUCTURES
 
 
-TCB_t *first= null; //header pointer
-TCB_t *RunQ = first;
+TCB_t *first= NULL; //header pointer
+TCB_t *RunQ = NULL;
 
 //FUNCTION DECLARATIONS
 struct TCB_t*  DelQueue(struct TCB_t  *head)
@@ -44,18 +44,13 @@ struct TCB_t*  DelQueue(struct TCB_t  *head)
 	
 }
 
-void RotateQ(struct TCB_t  *head)
-{
-	AddQueue(head, delQueue(head));	//Moves the head pointer to the next element in the queue
-	return;
-}
 
 struct TCB_t * NewItem () // cretes a new queue
 {
 	TCB_t  *head;
 	head = (TCB_t *) malloc (sizeof (TCB_t ));
-	TCB_t ->next= NULL;
-	TCB_t ->prev = NULL;
+	TCB_t->next= NULL;
+	TCB_t->prev = NULL;
 	
 	return head;
 	
@@ -82,8 +77,8 @@ void AddQueue(struct TCB_t *head,struct TCB_t *item) //adds to queue
 		{
 			first->next = item;
 			first->prev = item;
-			item-> next= first;
-			item-> prev = first;
+			item->next= first;
+			item->prev = first;
 		}
 		
 		else // multiple queus in list
@@ -94,8 +89,15 @@ void AddQueue(struct TCB_t *head,struct TCB_t *item) //adds to queue
 			first->prev = item; 
 		}
 	}
+	
+	RunQ = first;
 }
 
+void RotateQ(struct TCB_t  *head)
+{
+	AddQueue(head, delQueue(head));	//Moves the head pointer to the next element in the queue
+	return;
+}
 
 void FreeItem (struct TCB_t item) { free (item);}
 

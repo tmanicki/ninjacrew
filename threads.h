@@ -21,9 +21,9 @@ void start_thread(void (*function)(void))
   //   call addQ to add this TCB into the “RunQ” which is a global header pointer
   //end pseudo code
 	
-	TCB_T *tcb = newItem();
-	void *StackofStacks = (void* ) malloc (TheSizeOfTheStack);
-	init_TCB(tcb,function,StackofStacks,TheSizeOfTheStacks);
+	TCB_t *tcb = newItem();
+	void *StackofStacks = (void *) malloc (TheSizeOfTheStack);
+	init_TCB(tcb,function,StackofStacks,TheSizeOfTheStack);
 	AddQueue(&RunQ,tcb);
 	
 }
@@ -41,6 +41,6 @@ void yeild()
 	getcontext(&parent);
 	RunQ->context = parent;
 	RotateQ(&RunQ); //rotates Q
-	swapcontext(&parent, &()RunQ->context)):
+	swapcontext(&parent, &()RunQ->context);
 }
 #endif
