@@ -62,8 +62,11 @@ int main()
 	InitQueue(RunQ);
 	printf ("test2\n");
 	start_thread(odin);
+	printf ("test3\n");
 	start_thread(thor);
+	printf ("test4\n");
 	start_thread(loki);
+	printf ("test5\n");
 	run();
 	
 	return 0;
