@@ -50,39 +50,6 @@ void RotateQ(struct TCB_t  *head)
 	return;
 }
 
-//print for testing
-void PrintQueue(struct TCB_t  *head)
-{
-	struct TCB_t  *item = first; //get the 1st element
-	
-	//see if the queue is empty
-	if (first != NULL)
-	{
-		//check to see if mutiple elements
-		if (first->next != NULL)
-		{
-			struct TCB_t  *last = first->prev; //get the last item
-			
-			//loop through the elements
-			while (item !NULL && (item->payload != last->payload))
-			{
-				printf("This it the payload: %d \n", item ->payload); //print the payload
-				item = item->next; //go to the next item
-				sleep(1);
-			}
-		}
-		if (item != NULL)
-		{
-			printf("The payload is: %d \n", item->payload);
-		}
-	}
-	else
-	{
-			priftf("The queue is empty.")
-	}
-	return
-}
-
 struct TCB_t * NewItem () // cretes a new queue
 {
 	TCB_t  *head;
