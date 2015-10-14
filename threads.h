@@ -21,7 +21,7 @@ void start_thread(void (*function)(void))
   //   call addQ to add this TCB into the “RunQ” which is a global header pointer
   //end pseudo code
 	
-	TCB_t *tcb = newItem ();
+	TCB_t *tcb = NewItem ();
 	void *StackofStacks = (void *) malloc (8192);
 	init_TCB (tcb, function, StackofStacks,8192);
 	AddQueue(&RunQ,tcb);

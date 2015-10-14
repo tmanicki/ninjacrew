@@ -60,9 +60,9 @@ int main()
 {
 	InitQueue(RunQ);
 	
-	startThread(odin);
-	startThread(thor);
-	startThread(loki);
+	start_thread(odin);
+	start_thread(thor);
+	start_thread(loki);
 	run();
 	
 	return 0;
