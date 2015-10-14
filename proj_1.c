@@ -20,41 +20,50 @@ int main()
 	return 0;	
 }
 
-NewItem ()
+NewItem () // cretes a new queue
 {
+	qele *head;
+	head = (qele*) malloc (sizeof (qele));
+	qele->next= NULL;
+	qele->prev = NULL;
 	
-//	return current->next;
-	return current->item;
+	return head;
 	
 }
-
-InitQueue (&Head)
+//creates a new queue
+InitQueue (*head)
 {
-	qele *temp, *temp2;
-	temp = (qele*) malloc (sizeof (qele));
-	temp2 = (qele*) malloc (sizeof (qele))
-	
-	if (first==NULL)
+	//set head to null
+	head = NULL;
+}
+
+AddQueue(*head, *item) //adds to queue
+{
+	if (head == NULL) // no queue
 	{
-		head=temp;
-		head->next = NULL;
-		head->prev = NULL; 
+		item->next = NULL;
+		item->prev = NULL:
+		first = item;
 	}
 	
 	else
 	{
-		temp2=head->next;
+		if (head->next=NULL) // only 1 queue in list
+		{
+			first->next = item;
+			first->prev = item;
+			item-> next= first;
+			item-> prev = first;
+		}
 		
-		head->next=temp;
-		temp->prev = head;
-		temp->next = temp2;
+		else // multiple queus in list
+		{
+			item->prev = first->prev; 
+			item->next = first; 
+			first->prev->next = item; 
+			first->prev = item; 
+		}
 	}
-	
-}
-
-AddQueue(&head, item) 
-{
-	head->payload = item;
 }
 
 DelQueue(&head)
