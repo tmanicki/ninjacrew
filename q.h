@@ -22,6 +22,7 @@ typedef struct q //Create a struct of type qele
 	qele *next;
 }qele;
 
+qele *first= null; //header pointer
 
 //FUNCTION DECLARATIONS
 struct qele* NewItem(); //returns a pointer to a new q-element
@@ -89,7 +90,7 @@ void PrintQueue(struct qele *head)
 	return
 }
 
-NewItem () // cretes a new queue
+struct qele* NewItem () // cretes a new queue
 {
 	qele *head;
 	head = (qele*) malloc (sizeof (qele));
@@ -100,13 +101,13 @@ NewItem () // cretes a new queue
 	
 }
 //creates a new queue
-InitQueue (*head)
+void InitQueue (*head)
 {
 	//set head to null
 	head = NULL;
 }
 
-AddQueue(*head, *item) //adds to queue
+void AddQueue(*head, *item) //adds to queue
 {
 	if (head == NULL) // no queue
 	{
@@ -136,10 +137,7 @@ AddQueue(*head, *item) //adds to queue
 }
 
 
-FreeItem (item)
-{
-	free (item);
-}
+void FreeItem (item) { free (item);}
 
 //END HEADER GUARD
 #endif
