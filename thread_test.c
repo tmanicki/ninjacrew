@@ -60,7 +60,7 @@ int main()
 {
 	printf ("test1\n");
 	InitQueue(RunQ);
-	printf ("test2\n")
+	printf ("test2\n");
 	start_thread(odin);
 	start_thread(thor);
 	start_thread(loki);
