@@ -14,7 +14,7 @@ int global = 0;
 void oden(void)
 {
 	int local = 0;
-	
+	printf("ODEN");
 	//while(1)
 	for (;;)
 	{
@@ -32,7 +32,7 @@ void oden(void)
 void thor(void)
 {
 	int local = 0;
-	
+	printf("THOR");
 	for (;;)
 	{
 		printf("Thread Thor:  Global Value: %d   Local Value: %d\n", global, local);
@@ -47,7 +47,7 @@ void thor(void)
 void loki(void)
 {
 	int local = 0;
-	
+	printf("LOKI");
 	for (;;)
 	{
 		printf("Thread Loki:  Global Value: %d   Local Value: %d\n", global, local);
