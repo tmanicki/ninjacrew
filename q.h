@@ -73,7 +73,7 @@ void AddQueue(struct TCB_t *head, struct TCB_t *item) //adds to queue
 	
 	else
 	{
-		if (head->next= NULL) // only 1 queue in list
+		if (head->next == NULL) // only 1 queue in list
 		{
 			first->next = item;
 			first->prev = item;
