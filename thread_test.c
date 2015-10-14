@@ -11,8 +11,9 @@
 int global = 0;
 
 //funtion 1
-void odin(void)
+void oden(void)
 {
+	printf ("Oden\n");
 	int local = 0;
 	
 	while(1)
@@ -23,6 +24,7 @@ void odin(void)
 		sleep(1);
 		yeild;
 	}
+	printf ("Oden2\n");
 }
 
 //funtion 2
@@ -61,7 +63,7 @@ int main()
 	printf ("test1\n");
 	InitQueue(RunQ);
 	printf ("test2\n");
-	start_thread(odin);
+	start_thread(oden);
 	printf ("test3\n");
 	start_thread(thor);
 	printf ("test4\n");
