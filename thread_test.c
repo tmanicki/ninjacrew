@@ -13,7 +13,6 @@ int global = 0;
 //funtion 1
 void oden(void)
 {
-	]
 	int local = 0;
 	
 	//while(1)
