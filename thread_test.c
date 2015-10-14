@@ -17,7 +17,7 @@ void odin(void)
 	
 	while(1)
 	{
-		print("Thread 1:  Global Value: %d   Local Value: %d\n", global, local);
+		printf("Thread 1:  Global Value: %d   Local Value: %d\n", global, local);
 		global++;
 		local++;
 		sleep(1);
@@ -32,7 +32,7 @@ void thor(void)
 	
 	while(1)
 	{
-		print("Thread 2:  Global Value: %d   Local Value: %d\n", global, local);
+		printf("Thread 2:  Global Value: %d   Local Value: %d\n", global, local);
 		global++;
 		local++;
 		sleep(1);
@@ -47,7 +47,7 @@ void loki(void)
 	
 	while(1)
 	{
-		print("Thread 1:  Global Value: %d   Local Value: %d\n", global, local);
+		printf("Thread 1:  Global Value: %d   Local Value: %d\n", global, local);
 		global++;
 		local++;
 		sleep(1);
