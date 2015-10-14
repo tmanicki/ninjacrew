@@ -2,7 +2,7 @@
 **Authors: Emily Falkner, Tim Manicki
 **Class: CSE 430: Operating Systems
 **Professor: Partha Dasgupta
-**Assignment: Project 1
+**Assignment: Project 2
 **File Name: q.h
 ******************************************************************************************************/
 //HEADER FILES
@@ -54,6 +54,39 @@ void RotateQ(struct qele *head)
 {
 	AddQueue(head, delQueue(head));	//Moves the head pointer to the next element in the queue
 	return;
+}
+
+//print for testing
+void PrintQueue(struct qele *head)
+{
+	struct qele *item = first; //get the 1st element
+	
+	//see if the queue is empty
+	if (first != NULL)
+	{
+		//check to see if mutiple elements
+		if (first->next != NULL)
+		{
+			struct qele *last = first->prev; //get the last item
+			
+			//loop through the elements
+			while (item !NULL && (item->payload != last->payload))
+			{
+				printf("This it the payload: %d \n", item ->payload); //print the payload
+				item = item->next; //go to the next item
+				sleep(1);
+			}
+		}
+		if (item != NULL)
+		{
+			printf("The payload is: %d \n", item->payload);
+		}
+	}
+	else
+	{
+			priftf("The queue is empty.")
+	}
+	return
 }
 
 //END HEADER GUARD
