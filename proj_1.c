@@ -6,10 +6,12 @@
 **File Name: proj_1.cpp
 ***********************************************************************************/
 //HEADER FILES
-#include "q.h"
-#include<stdio.h>
-qele *head= null;
-qele *current = head;
+#include "q.h";
+//Libraries
+#include<stdio.h>;
+//global variables
+qele *first= null; //header pointer
+//qele *current = head; //current pointer 
 
 
 int main() 
@@ -22,27 +24,51 @@ NewItem ()
 {
 	
 //	return current->next;
+	return current->item;
 	
 }
 
-InitQueue (&head)
+InitQueue (&Head)
 {
+	qele *temp, *temp2;
+	temp = (qele*) malloc (sizeof (qele));
+	temp2 = (qele*) malloc (sizeof (qele))
+	
+	if (first==NULL)
+	{
+		head=temp;
+		head->next = NULL;
+		head->prev = NULL; 
+	}
+	
+	else
+	{
+		temp2=head->next;
+		
+		head->next=temp;
+		temp->prev = head;
+		temp->next = temp2;
+	}
 	
 }
 
 AddQueue(&head, item) 
 {
-	qele *temp;
-	temp = (qele*) malloc (sizeof (qele));
-	
-	
-	
-	else { return current-> next; }
+	head->payload = item;
 }
 
 DelQueue(&head)
 {
+	qele *temp;
+	temp = (qele*) malloc (sizeof (qele));
 	
+	if (head->prev == NULL)
+	{
+		if (head->next == NULL)
+		{
+			free (head);
+		}
+	}
 }
 
 // Deletes header
