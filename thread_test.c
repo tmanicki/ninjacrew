@@ -13,19 +13,20 @@ int global = 0;
 //funtion 1
 void oden(void)
 {
-	printf ("Oden\n");
+	]
 	int local = 0;
 	
 	//while(1)
 	for (;;)
 	{
-		printf("Thread 1:  Global Value: %d   Local Value: %d\n", global, local);
+		printf("Thread Oden:  Global Value: %d   Local Value: %d\n", global, local);
 		global++;
 		local++;
 		sleep(1);
 		yeild;
 	}
-	printf ("Oden2\n");
+	
+	
 }
 
 //funtion 2
@@ -35,7 +36,7 @@ void thor(void)
 	
 	while(1)
 	{
-		printf("Thread 2:  Global Value: %d   Local Value: %d\n", global, local);
+		printf("Thread Thor:  Global Value: %d   Local Value: %d\n", global, local);
 		global++;
 		local++;
 		sleep(1);
@@ -50,7 +51,7 @@ void loki(void)
 	
 	while(1)
 	{
-		printf("Thread 1:  Global Value: %d   Local Value: %d\n", global, local);
+		printf("Thread Loki:  Global Value: %d   Local Value: %d\n", global, local);
 		global++;
 		local++;
 		sleep(1);
@@ -61,15 +62,15 @@ void loki(void)
 //main
 int main()
 {
-	printf ("test1\n");
+	
 	InitQueue(RunQ);
-	printf ("test2\n");
+	
 	start_thread(oden);
-	printf ("test3\n");
+	
 	start_thread(thor);
-	printf ("test4\n");
+	
 	start_thread(loki);
-	printf ("test5\n");
+
 	run();
 	
 	return 0;
