@@ -93,5 +93,5 @@ RotateQ (&head)
 
 FreeItem (item)
 {
-	free item;
+	free (item);
 }
