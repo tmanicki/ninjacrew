@@ -26,7 +26,7 @@ void start_thread(void (*function)(void))
 	init_TCB (tcb, function, StackofStacks,8192);
 	AddQueue(RunQ,tcb);
 	
-}0-p
+}
 
 void run()
 {
