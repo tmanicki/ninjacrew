@@ -24,9 +24,9 @@ void start_thread(void (*function)(void))
 	TCB_t *tcb = NewItem ();
 	void *StackofStacks = (void *) malloc (8192);
 	init_TCB (tcb, function, StackofStacks,8192);
-	AddQueue(&RunQ,tcb);
+	AddQueue(RunQ,tcb);
 	
-}
+}0-p
 
 void run()
 {

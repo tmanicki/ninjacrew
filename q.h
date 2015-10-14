@@ -35,8 +35,8 @@ struct TCB_t*  DelQueue(struct TCB_t  *head)
 		}
 		else // if only one item
 		{
-		first = NULL;
-			}
+			first = NULL;
+		}
 	}
 	
 	return item;
@@ -62,7 +62,7 @@ void InitQueue (struct TCB_t *head)
 	head = NULL;
 }
 
-void AddQueue(struct TCB_t *head,struct TCB_t *item) //adds to queue
+void AddQueue(struct TCB_t *head, struct TCB_t *item) //adds to queue
 {
 	if (head == NULL) // no queue
 	{
