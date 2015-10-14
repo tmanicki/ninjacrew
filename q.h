@@ -15,22 +15,14 @@
 #define Q_H
 
 //DATA STRUCTURES
-typedef struct q //Create a struct of type qele
-{
-	int payload;
-	qele *prev;
-	qele *next;
-}qele;
 
-qele *first= null; //header pointer
+
+TCB_t *first= null; //header pointer
 
 //FUNCTION DECLARATIONS
-struct qele* NewItem(); //returns a pointer to a new q-element
-void InitQueue(struct qele* head);//creates an empty queue, pointed to by the variable head
-void AddQueue(struct qele* head, struct qele* item);//adds a queue item, pointed to by "item", to the queue pointed to by head
-struct qele*  DelQueue(struct qele *head)
+struct TCB_t*  DelQueue(struct TCB_t  *head)
 {
-	struct qele *item = first;
+	struct TCB_t  *item = first;
 	//check if queue is empty
 	if(first != NULL)
 	{
@@ -51,16 +43,16 @@ struct qele*  DelQueue(struct qele *head)
 	
 }
 
-void RotateQ(struct qele *head)
+void RotateQ(struct TCB_t  *head)
 {
 	AddQueue(head, delQueue(head));	//Moves the head pointer to the next element in the queue
 	return;
 }
 
 //print for testing
-void PrintQueue(struct qele *head)
+void PrintQueue(struct TCB_t  *head)
 {
-	struct qele *item = first; //get the 1st element
+	struct TCB_t  *item = first; //get the 1st element
 	
 	//see if the queue is empty
 	if (first != NULL)
@@ -68,7 +60,7 @@ void PrintQueue(struct qele *head)
 		//check to see if mutiple elements
 		if (first->next != NULL)
 		{
-			struct qele *last = first->prev; //get the last item
+			struct TCB_t  *last = first->prev; //get the last item
 			
 			//loop through the elements
 			while (item !NULL && (item->payload != last->payload))
@@ -90,24 +82,24 @@ void PrintQueue(struct qele *head)
 	return
 }
 
-struct qele* NewItem () // cretes a new queue
+struct TCB_t * NewItem () // cretes a new queue
 {
-	qele *head;
-	head = (qele*) malloc (sizeof (qele));
-	qele->next= NULL;
-	qele->prev = NULL;
+	TCB_t  *head;
+	head = (TCB_t *) malloc (sizeof (TCB_t ));
+	TCB_t ->next= NULL;
+	TCB_t ->prev = NULL;
 	
 	return head;
 	
 }
 //creates a new queue
-void InitQueue (*head)
+void InitQueue (struct TCB_t *head)
 {
 	//set head to null
 	head = NULL;
 }
 
-void AddQueue(*head, *item) //adds to queue
+void AddQueue(struct TCB_t *head,struct TCB_t *item) //adds to queue
 {
 	if (head == NULL) // no queue
 	{
@@ -137,7 +129,7 @@ void AddQueue(*head, *item) //adds to queue
 }
 
 
-void FreeItem (item) { free (item);}
+void FreeItem (struct TCB_t item) { free (item);}
 
 //END HEADER GUARD
 #endif
