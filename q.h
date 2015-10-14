@@ -18,6 +18,7 @@
 
 
 TCB_t *first= null; //header pointer
+TCB_t *RunQ = first;
 
 //FUNCTION DECLARATIONS
 struct TCB_t*  DelQueue(struct TCB_t  *head)
