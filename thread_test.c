@@ -22,7 +22,7 @@ void oden(void)
 		global++;
 		local++;
 		sleep(1);
-		yeild;
+		yeild();
 	}
 	
 	
