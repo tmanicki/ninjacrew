@@ -49,8 +49,8 @@ struct TCB_t * NewItem () // cretes a new queue
 {
 	TCB_t  *head;
 	head = (TCB_t *) malloc (sizeof (TCB_t ));
-	TCB_t->next= NULL;
-	TCB_t->prev = NULL;
+	head->next = NULL;
+	head->prev = NULL;
 	
 	return head;
 	
@@ -67,13 +67,13 @@ void AddQueue(struct TCB_t *head,struct TCB_t *item) //adds to queue
 	if (head == NULL) // no queue
 	{
 		item->next = NULL;
-		item->prev = NULL:
+		item->prev = NULL;
 		first = item;
 	}
 	
 	else
 	{
-		if (head->next=NULL) // only 1 queue in list
+		if (head->next= NULL) // only 1 queue in list
 		{
 			first->next = item;
 			first->prev = item;
@@ -95,11 +95,11 @@ void AddQueue(struct TCB_t *head,struct TCB_t *item) //adds to queue
 
 void RotateQ(struct TCB_t  *head)
 {
-	AddQueue(head, delQueue(head));	//Moves the head pointer to the next element in the queue
+	AddQueue(*head, delQueue(*head));	//Moves the head pointer to the next element in the queue
 	return;
 }
 
-void FreeItem (struct TCB_t item) { free (item);}
+//void FreeItem (struct TCB_t item) { free (item);}
 
 //END HEADER GUARD
 #endif

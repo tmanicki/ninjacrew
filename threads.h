@@ -23,7 +23,7 @@ void start_thread(void (*function)(void))
 	
 	TCB_t *tcb = newItem();
 	void *StackofStacks = (void *) malloc (TheSizeOfTheStack);
-	init_TCB(tcb,function,StackofStacks,TheSizeOfTheStack);
+	init_TCB (tcb,function,StackofStacks,TheSizeOfTheStack);
 	AddQueue(&RunQ,tcb);
 	
 }
@@ -40,7 +40,7 @@ void yeild()
 	ucontext_t parent;
 	getcontext(&parent);
 	RunQ->context = parent;
-	RotateQ(&RunQ); //rotates Q
-	swapcontext(&parent, &()RunQ->context);
+	RotateQ(*RunQ); //rotates Q
+	swapcontext(&parent, &(RunQ->context));
 }
 #endif
