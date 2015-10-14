@@ -89,5 +89,57 @@ void PrintQueue(struct qele *head)
 	return
 }
 
+NewItem () // cretes a new queue
+{
+	qele *head;
+	head = (qele*) malloc (sizeof (qele));
+	qele->next= NULL;
+	qele->prev = NULL;
+	
+	return head;
+	
+}
+//creates a new queue
+InitQueue (*head)
+{
+	//set head to null
+	head = NULL;
+}
+
+AddQueue(*head, *item) //adds to queue
+{
+	if (head == NULL) // no queue
+	{
+		item->next = NULL;
+		item->prev = NULL:
+		first = item;
+	}
+	
+	else
+	{
+		if (head->next=NULL) // only 1 queue in list
+		{
+			first->next = item;
+			first->prev = item;
+			item-> next= first;
+			item-> prev = first;
+		}
+		
+		else // multiple queus in list
+		{
+			item->prev = first->prev; 
+			item->next = first; 
+			first->prev->next = item; 
+			first->prev = item; 
+		}
+	}
+}
+
+
+FreeItem (item)
+{
+	free (item);
+}
+
 //END HEADER GUARD
 #endif
