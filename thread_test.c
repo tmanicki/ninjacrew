@@ -39,7 +39,7 @@ void thor(void)
 		global++;
 		local++;
 		sleep(1);
-		yeild;
+		yeild();
 	}
 }
 
@@ -54,7 +54,7 @@ void loki(void)
 		global++;
 		local++;
 		sleep(1);
-		yeild;
+		yeild();
 	}
 }
 
