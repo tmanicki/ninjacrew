@@ -95,7 +95,7 @@ void AddQueue(struct TCB_t *head,struct TCB_t *item) //adds to queue
 
 void RotateQ(struct TCB_t  *head)
 {
-	AddQueue(*head, delQueue(*head));	//Moves the head pointer to the next element in the queue
+	AddQueue(head, delQueue(head));	//Moves the head pointer to the next element in the queue
 	return;
 }
 
