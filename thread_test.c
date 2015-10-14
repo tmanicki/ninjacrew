@@ -58,7 +58,7 @@ void loki(void)
 //main
 int main()
 {
-	initQueue(RunQ);
+	InitQueue(RunQ);
 	
 	startThread(odin);
 	startThread(thor);
