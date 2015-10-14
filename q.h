@@ -29,13 +29,31 @@ void InitQueue(struct qele* head);//creates an empty queue, pointed to by the va
 void AddQueue(struct qele* head, struct qele* item);//adds a queue item, pointed to by "item", to the queue pointed to by head
 struct qele*  DelQueue(struct qele *head)
 {
-	//checks if the queue is empty
+	struct qele *item = first;
+	//check if queue is empty
+	if(first != NULL)
+	{
+		if(first ->next != NULL) //check to see if there are elements in the queue
+		{
+			first->prev->next = first->next; //change the prev and next to the right allocations
+			first->next->prev = first->prev;
+			first = first->next;
+		}
+		else // if only one item
+		{
+		first = NULL;
+			}
+	}
+	
+	return item;
+	
 	
 }
 
 void RotateQ(struct qele *head)
 {
-	*head = (*head)-> next; //Moves the head pointer to the next element in the queue
+	AddQueue(head, delQueue(head));	//Moves the head pointer to the next element in the queue
+	return;
 }
 
 //END HEADER GUARD
