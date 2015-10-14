@@ -16,7 +16,8 @@ void oden(void)
 	printf ("Oden\n");
 	int local = 0;
 	
-	while(1)
+	//while(1)
+	for (;;)
 	{
 		printf("Thread 1:  Global Value: %d   Local Value: %d\n", global, local);
 		global++;
