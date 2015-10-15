@@ -7,70 +7,91 @@
 ******************************************************************************************************/
 #include "threads.h"
 
-//global variable
+//GLOBAL VARIABLE
 int global = 0;
 
-//funtion 1
-void oden(void)
-{
-	int local = 0;
-	printf("ODEN\n");
-	//while(1)
-	for (;;)
-	{
-		printf("Thread Oden:  Global Value: %d   Local Value: %d\n", global, local);
-		global++;
-		local++;
-		sleep(1);
-		yeild();
-	}
-	
-	
-}
+//FORWARD DECLERATION
+void ODEN(void);
+void THOR(void);
+void LOKI(void);
 
-//funtion 2
-void thor(void)
-{
-	int local = 0;
-	printf("THOR\n");
-	for (;;)
-	{
-		printf("Thread Thor:  Global Value: %d   Local Value: %d\n", global, local);
-		global++;
-		local++;
-		sleep(1);
-		yeild();
-	}
-}
-
-//funtion 3
-void loki(void)
-{
-	int local = 0;
-	printf("LOKI\n");
-	for (;;)
-	{
-		printf("Thread Loki:  Global Value: %d   Local Value: %d\n", global, local);
-		global++;
-		local++;
-		sleep(1);
-		yeild();
-	}
-}
-
-//main
+//MAIN
 int main()
 {
 	
 	InitQueue(RunQ);
 	
-	start_thread(oden);
+	start_thread(ODEN);
 	
-	start_thread(thor);
+	start_thread(THOR);
 	
-	start_thread(loki);
+	start_thread(LOKI);
 
 	run();
 	
 	return 0;
 }
+
+/******************************************************************************************************
+** Below are all test functions
+******************************************************************************************************/
+
+//FUNCTION 1, NICKNAME ODEN
+void ODEN(void)
+{
+	int StaffofOden = 0;
+	printf("Begin ODEN\n");
+	
+	while(1)
+	{
+		printf("Thread ODEN:  Global Value: %d", global);
+		global++;
+		
+		printf ("   Local Value: %d\n", StaffofOden);
+		StaffofOden++;
+		
+		sleep(1);
+		yeild();
+	}
+	
+	
+}
+
+//FUNCTION 2, NICKNAME THOR
+void THOR(void)
+{
+	int HammerofThor = 0;
+	printf("Begin THOR\n");
+	for (;;)
+	{
+		printf("Thread THOR:  Global Value: %d", global);
+		global++;
+		
+		printf ("   Local Value: %d\n", HammerofThor);
+		HammerofThor++;
+		
+		
+		sleep(1);
+		yeild();
+	}
+}
+
+//FUNCTION 3, NICKNAME LOKI
+void LOKI(void)
+{
+	int TricksterLoki = 0;
+	printf("Begin LOKI\n");
+	for (;;)
+	{
+		printf("Thread LOKI:  Global Value: %d", global);
+		global++;
+		
+		printf ("   Local Value: %d\n", TricksterLoki);
+		TricksterLoki++;
+		
+		
+		sleep(1);
+		yeild();
+	}
+}
+

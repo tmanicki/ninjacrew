@@ -9,7 +9,6 @@
 #define TCB_H
 
 #include <ucontext.h>
-#include <stdio.h>
 #include <string.h>
 
 typedef struct TCB_t {
